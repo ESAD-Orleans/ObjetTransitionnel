@@ -1,12 +1,13 @@
 document.addEventListener('ontouchstart', function(e) {e.preventDefault()});
 document.addEventListener('ontouchmove', function(e) {e.preventDefault()});
 
-var DOT_DIAMETER = 100;
+var DOT_DIAMETER = 120;
 
 var canvas,
     exercice,
     itemIndex = 0,
-    item;
+    item,
+    touchDown = false;
 //
 
 function preload(){
@@ -21,12 +22,17 @@ function setup() {
 
 function draw() {
     noStroke();
+    fill(0,3);
+    rect(0,0,width,height);
     ellipseMode(CENTER);
-    background(0);  
     if(!item.Update()){
         itemIndex++;
         itemIndex = itemIndex>=exercice.items.length?0:itemIndex;
         LoadItem();
+    }
+    if(touchDown){
+        fill(200);
+        ellipse(touchX,touchY,DOT_DIAMETER,DOT_DIAMETER);
     }
 }
 
@@ -38,15 +44,23 @@ function LoadItem(){
         case 'circle' : item = new CirclePattern(itemOptions); break;
         case 'fixedpoint' : item = new FixedPointPattern(itemOptions); break;
         case 'polygon' : item = new PolygonPattern(itemOptions); break;
+        case 'infinite' : item = new InfinitePattern(itemOptions); break;
+        case 'spiral' : item = new SpiralPattern(itemOptions); break;
+        case 'silent' : item = new SilentPattern(itemOptions); break;
     }
     item.Setup();
 }
 
-function touchStarted() {}
+function touchStarted() {
+    touchDown = true;
+}
 
-function touchMoved() {}
+function touchMoved() {
+}
 
-function touchEnded() {}
+function touchEnded() {
+        touchDown = false;
+}
 
 function keyTyped() {}
 

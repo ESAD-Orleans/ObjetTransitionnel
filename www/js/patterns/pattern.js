@@ -24,6 +24,13 @@ var Pattern = function(options){
             this.startTime = (new Date()).getTime();
             this.Initialize();
         },
+        DrawDot:function(x,y,DIAMETER){
+            var DOT_R = 5;
+                dx = random(-DOT_R,DOT_R),
+                dy = random(-DOT_R,DOT_R),
+                d = _.isUndefined(DIAMETER)?DOT_DIAMETER:DIAMETER;
+            ellipse(x+dx,y+dy,d,d);
+        },
         Initialize:function(){
             // do nothing
         },

@@ -2,78 +2,146 @@
     "name":"Premier exercice",
     "items":[
         {
-            "type":"polygon",
-            "color":"#ffffff",
-            "cycleDuration":"4",
-            "cycleCount":"1",
-            "open":false,
-            "points":[
-                [100,100],
-                [700,400]
-            ]
+            "type":"circle",
+            "color":"#ffea27",
+            "cycleDuration":2,
+            "cycleCount":4,
+            "diameter":120,
+            "centerX":512,
+            "centerY":384,
+            "rotationDirection":"clockwise"
+        },
+         {
+            "type":"circle",
+            "color":"#fd4f57",
+            "cycleDuration":4,
+            "cycleCount":2,
+            "diameter":450,
+            "centerX":700,
+            "centerY":384,
+            "initialAngle":180,
+            "rotationDirection":"clockwise"
+        },
+         {
+            "type":"circle",
+            "color":"#1cc97e",
+            "cycleDuration":4,
+            "cycleCount":2,
+            "diameter":450,
+            "centerX":300,
+            "centerY":384,
+            "initialAngle":0,
+            "rotationDirection":"counterclockwise"
+        },{
+            "type":"silent",
+            "duration":1,
+            "fade":true
+        },
+        {
+            "type":"fixedpoint",
+            "color":"#0089ba",
+            "cycleDuration":1,
+            "cycleCount":3,
+            "centerX":900,
+            "centerY":100
         },
         {
             "type":"polygon",
-            "color":"#ff0000",
-            "cycleDuration":"4",
-            "cycleCount":"1",
+            "color":"#0089ba",
+            "cycleDuration":2,
+            "cycleCount":1,
             "open":true,
             "points":[
-                [100,100],
-                [700,400]
+                [900,100],
+                [100,680]
             ]
+        },{
+            "type":"silent",
+            "duration":1
         },
-        {
+         {
             "type":"polygon",
-            "color":"#ff00ff",
-            "cycleDuration":"4",
-            "cycleCount":"1",
+            "color":"#0089ba",
+            "cycleDuration":2,
+            "cycleCount":1,
             "open":true,
             "points":[
-                [100,100],
-                [700,400],
-                [200,600]
+                [100,680],
+                [900,680]
+            ]
+        },{
+            "type":"silent",
+            "duration":1
+        },
+         {
+            "type":"polygon",
+            "color":"#0089ba",
+            "cycleDuration":2,
+            "cycleCount":1,
+            "open":true,
+            "points":[
+                [900,680],
+                [900,100]
+            ]
+        },{
+            "type":"silent",
+            "duration":1
+        },
+         {
+            "type":"polygon",
+            "color":"#0089ba",
+            "cycleDuration":5,
+            "cycleCount":1,
+            "open":false,
+            "markSegment":true,
+            "points":[
+                [900,100],
+                [100,680],
+                [900,680]
             ]
         },
         {
             "type":"polygon",
-            "color":"#0000FF",
-            "cycleDuration":"4",
-            "cycleCount":"1",
+            "color":"#0089ba",
+            "cycleDuration":3,
+            "cycleCount":1,
             "open":false,
+            "markSegment":true,
             "points":[
-                [100,100],
-                [700,400],
-                [200,600]
+                [900,100],
+                [100,680],
+                [900,680]
             ]
         },
         {
             "type":"fixedpoint",
-            "color":"#ffff00",
-            "cycleDuration":"1",
-            "cycleCount":"1",
-            "centerX":700,
-            "centerY":300
+            "color":"#ffea27",
+            "cycleDuration":1,
+            "cycleCount":3,
+            "centerX":512,
+            "centerY":386
         },
         {
             "type":"circle",
-            "color":"#ff0000",
-            "cycleDuration":"1",
-            "cycleCount":"3",
-            "diameter":600,
-            "centerX":400,
-            "centerY":400,
-            "rotationDirection":"counterclockwise"
-        },
-        {
-            "type":"circle",
-            "color":"#00FF00",
-            "cycleDuration":"1",
-            "cycleCount":"3",
-            "diameter":300,
-            "centerX":200,
-            "centerY":400,
+            "color":"#ffea27",
+            "cycleDuration":2,
+            "cycleCount":2,
+            "diameter":120,
+            "centerX":512,
+            "centerY":384,
             "rotationDirection":"clockwise"
+        },{
+            "type":"circle",
+            "color":"#ffea27",
+            "cycleDuration":2,
+            "cycleCount":2,
+            "diameter":120,
+            "centerX":512,
+            "centerY":384,
+            "rotationDirection":"counterclockwise"
+        },{
+            "type":"silent",
+            "duration":3
         }
     ]
 }

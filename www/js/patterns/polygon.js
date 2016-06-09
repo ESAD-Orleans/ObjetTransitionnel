@@ -54,7 +54,7 @@ var PolygonPattern = function(options){
                 this.distancesAbsolute[n] = d;
                 d += this.distances[n]
             }
-            console.log(this.open,d,this.distancesAbsolute);
+           // console.log(this.open,d,this.distancesAbsolute);
 
         },
         UpdatePosition:function(){
@@ -63,10 +63,15 @@ var PolygonPattern = function(options){
                 b = segment[1];
             stroke(options.color);
             strokeWeight(2);
-            line(a.x,a.y,b.x,b.y);
+            //line(a.x,a.y,b.x,b.y);
             noStroke();
             fill(options.color);
-            ellipse(segment.dx,segment.dy,DOT_DIAMETER,DOT_DIAMETER);
+            this.DrawDot(segment.dx,segment.dy);
+            console.log(options);
+            if(options.markSegment){
+                this.DrawDot(a.x,a.y);
+            }
+            //this.DrawDot(b.x,b.y);
         },
         Draw:function(){
             fill(options.color);

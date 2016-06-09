@@ -9,8 +9,11 @@ var FixedPointPattern = function(options){
             this.startTime = (new Date()).getTime();
         },
         Draw:function(){
-            fill(options.color);
-            ellipse(this.centerX,this.centerY,DOT_DIAMETER,DOT_DIAMETER);
+            var t = this.CurrentTimeInCyclePosition()
+            var baseColor = color(options.color);
+            var fillColor = color(red(baseColor),green(baseColor),blue(baseColor),cos((t-1)*PI)*250)
+            fill(fillColor);
+            this.DrawDot(this.centerX,this.centerY,(t)*DOT_DIAMETER);
         }
     }
     return _.extend(pattern,prototype);
